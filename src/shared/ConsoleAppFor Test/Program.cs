@@ -1,7 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using Bolog.Domain.ArticleAggregate.Models;
 using ConsoleAppFor_Test;
 
+var tag = Tag.Create("ali reza doost dar");
 var money1 = new Money(2000, "IIR");
 var money2 = new Money(2000, "IIR");
 if (money1 != money2)
