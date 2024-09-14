@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="ArticleAggregate\Models\" />
     <Folder Include="CommentAggregate\" />
     <Folder Include="SubscriberAggregate\" />
   </ItemGroup>

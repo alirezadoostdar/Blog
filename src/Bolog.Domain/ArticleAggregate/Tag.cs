@@ -1,7 +1,7 @@
 ﻿using Humanizer;
 using Blog.BuildingBlocks.Domain;
 
-namespace Bolog.Domain.ArticleAggregate.Models;
+namespace Bolog.Domain.ArticleAggregate;
 
 public class Tag : ValueObject<Tag>
 {
