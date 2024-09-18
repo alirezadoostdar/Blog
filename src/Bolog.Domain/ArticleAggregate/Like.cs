@@ -3,7 +3,7 @@ using System.Net;
 
 namespace Bolog.Domain.ArticleAggregate;
 
-public class Link : ValueObject<Link>
+public class Like : ValueObject<Like>
 {
     public string ClientIP { get; set; } = null!;
     public DateTime LinkedOn { get; set; }
@@ -13,14 +13,14 @@ public class Link : ValueObject<Link>
         yield return ClientIP;
     }
 
-    public static Link Create(string clientIp, DateTime linkedOn)
+    public static Like Create(string clientIp, DateTime linkedOn)
     {
         if (!IPAddress.TryParse(clientIp,out IPAddress? ipAddress))
         {
             throw new ArgumentOutOfRangeException(nameof(clientIp));
         }
 
-        return new Link
+        return new Like
         {
             ClientIP = clientIp,
             LinkedOn = linkedOn
