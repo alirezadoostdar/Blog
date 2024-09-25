@@ -1,11 +1,13 @@
-﻿using System.ComponentModel.Design;
+﻿using Blog.BuildingBlocks.Domain;
+using System.ComponentModel.Design;
 
 namespace Bolog.Domain.ArticleAggregate;
-public class Article
+public class Article : AggregateRoot<ArticleId>
 {
-    private Article(ArticleId slug):base(slug)
+    private Article(ArticleId slug) : base(slug)
     {
-        
+        _tags = [];
+        _likes = [];
     }
     private Article():this(null!) { }
 
@@ -33,7 +35,7 @@ public class Article
             Author = Author.CreateDefaultAuthor(),
             Body = body,
             Status = ArticleStatus.Draft,
-            ReadOnTimeSpan = getre,
+            ReadOnTimeSpan = GetReadOnTimeSpan(body),
             Summary = summary,
             Title = title,
         };
@@ -42,11 +44,65 @@ public class Article
     {
         var article = CreateDraft(title, body, summary);
         article.AddTags(tags);
-        article.pu
+        article.Publish();
+        return article;
     }
 
     public void AddTags(IReadOnlyList<Tag> tags)
     {
         _tags.AddRange(tags);
+    }
+
+    private static TimeSpan GetReadOnTimeSpan(string body)
+    {
+        if (string.IsNullOrWhiteSpace(body))
+        {
+            return TimeSpan.Zero;
+        }
+
+        var words = body.Split(' ', '\t', '\n', '\r').Length;
+        var readingTimeMinutes = words / 200.0;
+        return TimeSpan.FromSeconds(readingTimeMinutes);
+    }
+
+    public void UpdateDraft(string title, string summary,string body)
+    {
+        Title = title;
+        Body = body;
+        Summary = summary;
+        ReadOnTimeSpan = GetReadOnTimeSpan(body);
+    }
+
+    public void UpdateTags(IReadOnlyList<Tag> tags)
+    {
+        _tags.Clear();
+
+        AddTags(tags);
+    }
+
+    public void Publish()
+    {
+        if (_tags.Count == 0)
+        {
+            throw new DraftTagsMissingException();
+        }
+
+        Status =ArticleStatus.Published;
+        ReadOnTimeSpan = GetReadOnTimeSpan(Body);
+        PublishedOnUtc = DateTime.UtcNow;
+    }
+
+    public void Remove()
+    {
+        Status = ArticleStatus.Deleted;
+    }
+
+    public void Like(Like like)
+    {
+        var item = _likes.FirstOrDefault(x => x==like);
+        if (item is null)
+        {
+            _likes.Add(like);
+        }
     }
 }
