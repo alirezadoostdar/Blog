@@ -1,4 +1,5 @@
 ﻿using Blog.BuildingBlocks.Domain;
+using Bolog.Domain.CommentAggregate;
 using System.ComponentModel.Design;
 
 namespace Bolog.Domain.ArticleAggregate;
@@ -11,7 +12,8 @@ public class Article : AggregateRoot<ArticleId>
     }
     private Article():this(null!) { }
 
-    //private readonly List<CommentId> _commentIds = null!;
+    private readonly List<CommentId> _commentIds = null!;
+    public IReadOnlyCollection<CommentId> CommentIds => [.._commentIds];
 
     private readonly List<Tag> _tags = null!;
     public IReadOnlyCollection<Tag> Tags => [.. _tags];
@@ -87,7 +89,7 @@ public class Article : AggregateRoot<ArticleId>
             throw new DraftTagsMissingException();
         }
 
-        Status =ArticleStatus.Published;
+        Status = ArticleStatus.Published;
         ReadOnTimeSpan = GetReadOnTimeSpan(Body);
         PublishedOnUtc = DateTime.UtcNow;
     }

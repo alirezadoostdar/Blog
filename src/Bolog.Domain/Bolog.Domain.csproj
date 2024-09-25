@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="CommentAggregate\" />
     <Folder Include="SubscriberAggregate\" />
   </ItemGroup>
 
