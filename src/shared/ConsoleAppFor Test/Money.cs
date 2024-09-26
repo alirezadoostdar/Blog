@@ -14,7 +14,7 @@ namespace ConsoleAppFor_Test
 
         public Money(decimal amount, string currency)
         {
-            Amount = amount;
+            Amount = amount; 
             Currency = currency;
         }
 
