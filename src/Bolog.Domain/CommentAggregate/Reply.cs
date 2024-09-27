@@ -2,22 +2,29 @@
 
 namespace Bolog.Domain.CommentAggregate;
 
-public class Reply : ValueObject<ReplyId>
+public class Reply(ReplyId id) : Entity<ReplyId>(id)
 {
-    public Guid Value { get; set; }
-    public override IEnumerable<object> GetEqualityComponents()
+    public Reply() : this(null!)
     {
-        yield return Value;
-    }
 
-    public static ReplyId CreateUniqueId() => Create(Guid.NewGuid());
-
-    public static ReplyId Create(Guid value) => new ReplyId
-    {
-        Value = value
-    };
-    public override string ToString()
-    {
-        return Value.ToString();
     }
+    public Client Client { get; init; } = null!;
+    public ApproveLink ApproveLink { get; init; } = null!;
+    public DateTime CreatedOnUtc { get; init; }
+
+    public string Content { get; init; } = null!;
+
+    public bool IsApproved { get; private set; }
+
+    public static Reply Create(Client client, string content, ApproveLink approveLink) =>
+        new Reply(ReplyId.CreateUniqueId())
+        {
+            Content = content,
+            CreatedOnUtc = DateTime.UtcNow,
+            Client = client,
+            IsApproved = false,
+            ApproveLink = approveLink
+        };
+
+    public void Approve() => IsApproved = true;
 }
