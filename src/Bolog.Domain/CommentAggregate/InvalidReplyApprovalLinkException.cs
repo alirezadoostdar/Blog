@@ -1,6 +1,6 @@
 ﻿using Blog.BuildingBlocks.Domain;
 
-namespace Bolog.Domain.CommentAggregate;
+namespace Blog.Domain.CommentAggregate;
 
 public class InvalidReplyApprovalLinkException : DomainException
 {

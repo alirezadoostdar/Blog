@@ -1,6 +1,6 @@
 ﻿using Blog.BuildingBlocks.Domain;
 
-namespace Bolog.Domain.ArticleAggregate;
+namespace Blog.Domain.ArticleAggregate;
 
 internal class DraftTagsMissingException : DomainException
 {

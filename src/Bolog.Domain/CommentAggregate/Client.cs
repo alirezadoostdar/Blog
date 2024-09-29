@@ -1,7 +1,7 @@
 ﻿using Blog.BuildingBlocks.Domain;
 using Blog.BuildingBlocks.Exceptions;
 
-namespace Bolog.Domain.CommentAggregate;
+namespace Blog.Domain.CommentAggregate;
 
 public class Client : ValueObject<Client>
 {

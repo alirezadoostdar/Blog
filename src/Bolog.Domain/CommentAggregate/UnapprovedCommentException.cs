@@ -1,4 +1,4 @@
-﻿namespace Bolog.Domain.CommentAggregate;
+﻿namespace Blog.Domain.CommentAggregate;
 
 public class UnapprovedCommentException : Exception
 {

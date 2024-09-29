@@ -1,7 +1,6 @@
-﻿using Blog.BuildingBlocks.Domain;
-using Bolog.Domain.ArticleAggregate;
+﻿using Blog.Domain.ArticleAggregate;
 
-namespace Bolog.Domain.CommentAggregate;
+namespace Blog.Domain.CommentAggregate;
 
 public class Comment : AggregateRoot<CommentId>
 {

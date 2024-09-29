@@ -1,7 +1,7 @@
 ﻿using Blog.BuildingBlocks.Domain;
 using Humanizer;
 
-namespace Bolog.Domain.ArticleAggregate;
+namespace Blog.Domain.ArticleAggregate;
 
 public sealed class ArticleId : ValueObject<ArticleId>
 {

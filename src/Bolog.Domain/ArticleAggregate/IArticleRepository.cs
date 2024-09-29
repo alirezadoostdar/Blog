@@ -1,6 +1,6 @@
-﻿using Bolog.Domain.ArticleAggregate.Models;
+﻿using Blog.Domain.ArticleAggregate.Models;
 
-namespace Bolog.Domain.ArticleAggregate;
+namespace Blog.Domain.ArticleAggregate;
 
 public interface IArticleRepository
 {

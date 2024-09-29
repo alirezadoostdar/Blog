@@ -1,6 +1,6 @@
-﻿using Bolog.Domain.ArticleAggregate;
+﻿using Blog.Domain.ArticleAggregate;
 
-namespace Bolog.Domain.CommentAggregate;
+namespace Blog.Domain.CommentAggregate;
 
 public interface  ICommentRepository
 {

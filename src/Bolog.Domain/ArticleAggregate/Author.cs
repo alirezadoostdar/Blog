@@ -1,6 +1,6 @@
 ﻿using Blog.BuildingBlocks.Domain;
 
-namespace Bolog.Domain.ArticleAggregate;
+namespace Blog.Domain.ArticleAggregate;
 
 public class Author : ValueObject<Author>
 {

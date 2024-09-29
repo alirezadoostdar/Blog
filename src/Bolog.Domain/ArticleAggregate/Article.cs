@@ -1,8 +1,5 @@
-﻿using Blog.BuildingBlocks.Domain;
-using Bolog.Domain.CommentAggregate;
-using System.ComponentModel.Design;
-
-namespace Bolog.Domain.ArticleAggregate;
+﻿
+namespace Blog.Domain.ArticleAggregate;
 public class Article : AggregateRoot<ArticleId>
 {
     private Article(ArticleId slug) : base(slug)

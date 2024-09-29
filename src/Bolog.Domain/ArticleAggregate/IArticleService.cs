@@ -1,4 +1,4 @@
-﻿namespace Bolog.Domain.ArticleAggregate;
+﻿namespace Blog.Domain.ArticleAggregate;
 
 public interface IArticleService
 {

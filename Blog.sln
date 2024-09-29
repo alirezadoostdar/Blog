@@ -7,13 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{22769251-A56
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4B8F14D0-3D58-4B95-A789-9E3C25FE43BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolog.Domain", "src\Bolog.Domain\Bolog.Domain.csproj", "{A8765F45-8645-4449-989D-41841F4065AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Domain", "src\Bolog.Domain\Blog.Domain.csproj", "{A8765F45-8645-4449-989D-41841F4065AA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{21EA91CD-F631-43CA-975A-1D47DFB26A68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.BuildingBlocks", "src\shared\Blog.BuildingBlocks\Blog.BuildingBlocks.csproj", "{56F16EE2-3F6D-4598-A430-0A9746EDB48A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.BuildingBlocks", "src\shared\Blog.BuildingBlocks\Blog.BuildingBlocks.csproj", "{56F16EE2-3F6D-4598-A430-0A9746EDB48A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppFor Test", "src\shared\ConsoleAppFor Test\ConsoleAppFor Test.csproj", "{AA96BFA6-B67B-4B72-AD5A-536772C82DC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppFor Test", "src\shared\ConsoleAppFor Test\ConsoleAppFor Test.csproj", "{AA96BFA6-B67B-4B72-AD5A-536772C82DC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
