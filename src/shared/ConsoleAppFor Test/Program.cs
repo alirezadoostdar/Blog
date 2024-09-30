@@ -1,9 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using Bolog.Domain.ArticleAggregate;
+using Blog.Domain.ArticleAggregate;
+using Blog.Infrastructure;
 using ConsoleAppFor_Test;
 using System.Net;
 
+
+var test = typeof(IAssemblyMaker).Assembly;
 
 var res = IPAddress.TryParse("94.182.46.220", out IPAddress? ipAddress);
 var tag = Tag.Create("ali reza doost dar");

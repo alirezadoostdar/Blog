@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.BuildingBlocks", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppFor Test", "src\shared\ConsoleAppFor Test\ConsoleAppFor Test.csproj", "{AA96BFA6-B67B-4B72-AD5A-536772C82DC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Infrastructure", "src\Blog.Infrastructure\Blog.Infrastructure.csproj", "{07D21CCF-C964-40DB-ABB8-F83DE716D27A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AA96BFA6-B67B-4B72-AD5A-536772C82DC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA96BFA6-B67B-4B72-AD5A-536772C82DC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA96BFA6-B67B-4B72-AD5A-536772C82DC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07D21CCF-C964-40DB-ABB8-F83DE716D27A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07D21CCF-C964-40DB-ABB8-F83DE716D27A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07D21CCF-C964-40DB-ABB8-F83DE716D27A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07D21CCF-C964-40DB-ABB8-F83DE716D27A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 		{21EA91CD-F631-43CA-975A-1D47DFB26A68} = {22769251-A563-4955-89CE-3CDC86F4D6F5}
 		{56F16EE2-3F6D-4598-A430-0A9746EDB48A} = {21EA91CD-F631-43CA-975A-1D47DFB26A68}
 		{AA96BFA6-B67B-4B72-AD5A-536772C82DC2} = {21EA91CD-F631-43CA-975A-1D47DFB26A68}
+		{07D21CCF-C964-40DB-ABB8-F83DE716D27A} = {22769251-A563-4955-89CE-3CDC86F4D6F5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EB88963-6855-418B-9D35-E5325D6BD80D}
